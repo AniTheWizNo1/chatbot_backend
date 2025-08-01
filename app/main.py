@@ -12,3 +12,6 @@ app = FastAPI(
 )
 
 app.include_router(router, prefix="/api/v1")
+@app.get("/")
+def root():
+    return {"message": "SP4 Chatbot Backend is live 🔥"}
